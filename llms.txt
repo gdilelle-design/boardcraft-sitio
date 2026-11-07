@@ -1,0 +1,15 @@
+# BoardCraft
+
+> Plataforma de gobierno corporativo para juntas directivas, directorios y consejos de administración, diseñada a partir de la inteligencia artificial y con la seguridad como punto de partida. En castellano, para América Latina y España.
+
+BoardCraft reúne el plan del año, la agenda, la convocatoria, los materiales y las actas de la junta. Antes de cada sesión, cuatro agentes de IA analizan cada punto de la agenda: BoardFlow ordena el tema, BoardMemory trae los antecedentes de las actas anteriores con su cita, BoardRadar busca contexto en internet sin nombres de la empresa y BoardCoach une todo en un informe con preguntas sugeridas. La IA no decide ni dice qué votar. Cada afirmación sobre una sesión anterior se compara con el texto real del acta y queda con un estado visible: respaldada, respaldo parcial, inferida, no coincide o sin respaldo.
+
+Seguridad: cada empresa en su propio espacio; cada persona ve sólo las sesiones donde tiene un rol; segunda comprobación obligatoria al ingresar; marca de agua y bloqueo de descarga de materiales; cada función de IA se puede encender o pausar por empresa.
+
+Contacto: gabriel@getboardcraft.com
+
+## Páginas
+
+- [Página principal](https://getboardcraft.com/): qué es BoardCraft, cómo trabaja, para quién, control de la IA, seguridad, origen y preguntas frecuentes.
+- [Cómo preparar una sesión de junta directiva](https://getboardcraft.com/guias/preparar-una-sesion-de-junta-directiva/): Siete pasos para que la sesión se use para decidir, no para ponerse al día.
+- [Junta directiva, directorio o consejo de administración](https://getboardcraft.com/guias/junta-directiva-directorio-o-consejo/): Cómo se llama el órgano, y sus miembros, en cada país de habla hispana.
