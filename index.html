@@ -701,6 +701,10 @@ footer a{color:var(--fg-2)}
 .demo-form .df-pie{display:block;color:var(--muted);font-size:12px;margin-top:10px}
 .df-respuesta{width:100%;min-height:150px;border:0;border-radius:12px;background:#fff;margin-top:12px}
 .df-nota{font-size:12.5px;color:var(--muted);margin-top:8px}
+.df-ok{display:flex;gap:14px;align-items:center;margin-top:14px;padding:18px 20px;border:1px solid var(--gold);border-radius:12px;background:rgba(176,141,87,.08);color:var(--gold-hi);outline:none}
+.df-ok[hidden]{display:none}
+.df-ok b{display:block;color:#fff;font-size:16px;font-weight:600}
+.df-ok span{display:block;color:var(--fg-2);font-size:14px;margin-top:2px}
 @media (max-width:520px){.demo-form .df-par{grid-template-columns:1fr}}
 footer{background:var(--deep);border-top:1px solid var(--edge)}
 footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
@@ -1132,10 +1136,14 @@ footer em{font-style:normal;color:var(--gold-hi)}
           <span class="mail" id="mail">hola@getboardcraft.com</span>
           <button class="copiar" id="copiar" type="button">Copiar</button>
         </div>
-        <small id="copiado" aria-live="polite">Escríbanos y coordinamos el horario.</small>
-        <div class="o-sep"><span>o déjenos sus datos</span></div>
+        <small id="copiado" aria-live="polite">Escríbanos a este correo o, si prefiere, complete el formulario.</small>
+        <div class="o-sep"><span>formulario</span></div>
         <iframe id='hidden7707958000000643600Frame' name='hidden7707958000000643600Frame' title="Respuesta del formulario" style='display: none;' class='df-respuesta'></iframe>
         <p id="demo-respuesta-nota" class="df-nota" hidden>Si ve un mensaje de error en el recuadro, escríbanos al correo de arriba.</p>
+        <div id="demo-ok" class="df-ok" tabindex="-1" role="status" hidden>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>Recibimos su pedido.</b><span>Lo contactaremos a la brevedad.</span></div>
+        </div>
         <div id='BiginWebToRecordFormParent7707958000000643600' class="demo-form">
           <form id='BiginWebToRecordForm7707958000000643600' name='BiginWebToRecordForm7707958000000643600' action='https://bigin.zoho.com/crm/WebForm' method='POST' enctype='multipart/form-data' target='hidden7707958000000643600Frame' accept-charset='UTF-8' onsubmit='return bcEnviarDemo(event)' novalidate>
             <input type='text' style='display:none;' name='xnQsjsdp' value='aa965cf7cf087b306fc1c4cf8e6ada0a377cf23d72a637493e01f42c8b78071b'/>
@@ -1670,16 +1678,16 @@ var mndFields7707958000000643600=new Array('First Name','Last Name','Email','Acc
 
 	   
 		document.getElementById('hidden7707958000000643600Frame').addEventListener('load', function () {
-			try {
-				var doc = arguments[0].currentTarget.contentWindow.document;
-				if(doc.body.childElementCount !== 0) {
-					arguments[0].currentTarget.style.display = 'block'; document.getElementById('demo-respuesta-nota').hidden = false;
-					document.getElementById('BiginWebToRecordFormParent7707958000000643600').style.display = 'none';
-				}
-			} catch (error) {
-				arguments[0].currentTarget.style.display = 'block'; document.getElementById('demo-respuesta-nota').hidden = false;
-				document.getElementById('BiginWebToRecordFormParent7707958000000643600').style.display = 'none';
-				setSubmitState7707958000000643600(false);
+			var fr = this, dir = null;
+			try { dir = fr.contentWindow.location.href; } catch (e) { dir = null; }
+			if (dir === 'about:blank') return;
+			document.getElementById('BiginWebToRecordFormParent7707958000000643600').style.display = 'none';
+			if (dir && dir.indexOf('/gracias') !== -1) {
+				fr.style.display = 'none';
+				var ok = document.getElementById('demo-ok'); ok.hidden = false; ok.focus();
+			} else {
+				fr.style.display = 'block';
+				document.getElementById('demo-respuesta-nota').hidden = false;
 			}
 		});
 
