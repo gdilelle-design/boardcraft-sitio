@@ -1137,7 +1137,7 @@ footer em{font-style:normal;color:var(--gold-hi)}
         <iframe id='hidden7707958000000643600Frame' name='hidden7707958000000643600Frame' title="Respuesta del formulario" style='display: none;' class='df-respuesta'></iframe>
         <p id="demo-respuesta-nota" class="df-nota" hidden>Si ve un mensaje de error en el recuadro, escríbanos al correo de arriba.</p>
         <div id='BiginWebToRecordFormParent7707958000000643600' class="demo-form">
-          <form id='BiginWebToRecordForm7707958000000643600' name='BiginWebToRecordForm7707958000000643600' method='POST' enctype='multipart/form-data' target='hidden7707958000000643600Frame' accept-charset='UTF-8' onsubmit='return bcEnviarDemo(event)' novalidate>
+          <form id='BiginWebToRecordForm7707958000000643600' name='BiginWebToRecordForm7707958000000643600' action='https://bigin.zoho.com/crm/WebForm' method='POST' enctype='multipart/form-data' target='hidden7707958000000643600Frame' accept-charset='UTF-8' onsubmit='return bcEnviarDemo(event)' novalidate>
             <input type='text' style='display:none;' name='xnQsjsdp' value='aa965cf7cf087b306fc1c4cf8e6ada0a377cf23d72a637493e01f42c8b78071b'/>
             <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
             <input type='text' style='display:none;' name='xmIwtLD' value='afc0f2e400096ae81a1221e9db3cbcacbedf586507f693fd1c512e2825dc92087b39c858cbeda08fc9bc891d61ef58ae'/>
@@ -1195,7 +1195,7 @@ footer em{font-style:normal;color:var(--gold-hi)}
       <ul>
         <li>Este sitio no usa cookies propias, ni herramientas de medición de visitas, ni publicidad.</li>
         <li>Si nos escribe al correo de contacto, usamos su mensaje sólo para responderle.</li>
-        <li>Tiene un solo formulario, para pedir una demo. Lo que escriba ahí se guarda en Bigin, el sistema de Zoho con el que BoardCraft hace el seguimiento de sus contactos comerciales, y lo usamos sólo para responderle. Para frenar envíos automáticos, el formulario usa Google reCAPTCHA, que puede usar cookies propias para esa comprobación. Esos dos servicios se cargan recién cuando usted empieza a completar el formulario.</li>
+        <li>Tiene un solo formulario, para pedir una demo. Lo que escriba ahí se guarda en Bigin, el sistema de Zoho con el que BoardCraft hace el seguimiento de sus contactos comerciales, y lo usamos sólo para responderle. Para frenar envíos automáticos, el formulario usa Google reCAPTCHA, que puede usar cookies propias para esa comprobación y se carga recién cuando usted empieza a completar el formulario. Bigin recibe los datos sólo cuando usted lo envía.</li>
         <li>El país se deduce del huso horario de su dispositivo, dentro de su navegador, y no se envía a ningún servidor. Si usted elige un país, su navegador lo recuerda para la próxima visita.</li>
         <li>La tipografía y el audio están dentro del propio sitio: si no usa el formulario, su visita no consulta a servicios de terceros.</li>
         <li>El servicio que aloja el sitio puede registrar datos técnicos de la visita, como la dirección IP, por razones de seguridad.</li>
@@ -1473,8 +1473,11 @@ footer em{font-style:normal;color:var(--gold-hi)}
 })();
 </script>
 <script>
-/* Formulario de pedido de demo (Bigin). Google reCAPTCHA y el código de Bigin se cargan
-   recién cuando la persona empieza a usar el formulario: antes, la visita no consulta a terceros. */
+/* Formulario de pedido de demo (Bigin). Google reCAPTCHA se carga recién cuando la persona
+   empieza a usar el formulario: antes, la visita no consulta a terceros.
+   El destino del envío (bigin.zoho.com/crm/WebForm) y la validación previa replican lo que hace
+   la página que publica Bigin (medido el 27/11/2026); no dependen del script externo de Bigin,
+   que en este sitio no se ejecutaba. */
 var mndFields7707958000000643600=new Array('First Name','Last Name','Email','Accounts.Account Name');
  	  var fldLangVal7707958000000643600=new Array('Nombre','Apellido','Correo electrónico','Empresa');
  	 var wfInnerWidth = window.innerWidth;
@@ -1550,14 +1553,14 @@ var mndFields7707958000000643600=new Array('First Name','Last Name','Email','Acc
  	 	 	 	 	break;
  	 	 	 	case 'email':
  	 	 	 	 	if(validateFldVal.match(/^([A-Za-z0-9-._%'+/]+@[A-Za-z0-9.-]+.[a-zA-Z]{2,22})$/) === null) {
- 	 	 	 	 	 	setError(validateFld[i], 'Revise el campo ' + fLabel);
+ 	 	 	 	 	 	setError(validateFld[i], 'Revise el campo ' + fLabel + '.');
  	 	 	 	 	 	isReturn = false;
  	 	 	 	 	}
  	 	 	 	 	break;
  	 	 	 	case 'number':
  	 	 	 	case 'double':
  	 	 	 	 	var isError = false,
- 	 	 	 	 	errorKey = 'Revise el campo ' + fLabel;
+ 	 	 	 	 	errorKey = 'Revise el campo ' + fLabel + '.';
  	 	 	 	 	if((validateFld[i].getAttribute('ftype') === 'number' && validateFldVal.match(/^[0-9]+$/) === null)
  	 	 	 	 			|| (validateFld[i].getAttribute('ftype') === 'double' && validateFldVal.match(/^[0-9]*(\.[0-9]{0,2})?$/) === null)) {
  	 	 	 	 	 	isError = true;
@@ -1685,14 +1688,15 @@ var mndFields7707958000000643600=new Array('First Name','Last Name','Email','Acc
   function cargar(){
     if(cargado) return; cargado=true;
     var r=document.createElement('script'); r.src='https://www.google.com/recaptcha/api.js?hl=es'; r.async=true; r.defer=true; document.body.appendChild(r);
-    var w=document.createElement('script'); w.id='wf_script'; w.src='https://bigin.zoho.com/crm/WebformScriptServlet?rid=afc0f2e400096ae81a1221e9db3cbcacbedf586507f693fd1c512e2825dc92087b39c858cbeda08fc9bc891d61ef58aegidaa965cf7cf087b306fc1c4cf8e6ada0a377cf23d72a637493e01f42c8b78071b'; document.body.appendChild(w);
     var esp=form.querySelector('.df-espera'); if(esp) esp.remove();
   }
+  window['setSubmitState7707958000000643600']=function(){};   /* el código de Bigin la nombra; no hace falta que haga nada */
   form.addEventListener('focusin', cargar);
   form.addEventListener('pointerdown', cargar);
   window.bcEnviarDemo=function(e){
-    if(!cargado || typeof window['validateForm7707958000000643600']!=='function'){ cargar(); if(e) e.preventDefault(); return false; }
-    return window['validateForm7707958000000643600']();
+    if(!cargado){ cargar(); if(e) e.preventDefault(); return false; }
+    if(checkMandatory7707958000000643600()) return true;   /* sigue el envío normal hacia Bigin */
+    if(e) e.preventDefault(); return false;
   };
 })();
 </script>
