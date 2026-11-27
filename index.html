@@ -28,7 +28,7 @@
    "name": "BoardCraft",
    "url": "https://getboardcraft.com/",
    "logo": "https://getboardcraft.com/favicon.svg",
-   "email": "gabriel@getboardcraft.com",
+   "email": "hola@getboardcraft.com",
    "description": "Plataforma de gobierno corporativo para juntas directivas, directorios y consejos de administración, diseñada a partir de la inteligencia artificial.",
    "slogan": "Where governance meets intelligence."
   },
@@ -676,6 +676,32 @@ footer a{color:var(--fg-2)}
 .copiar{font:600 13px/1 var(--font);padding:9px 12px;border-radius:8px;border:1px solid var(--edge-2);background:transparent;color:#fff;cursor:pointer}
 .copiar:hover{background:rgba(255,255,255,.08)}
 .contacto small{display:block;color:var(--muted);font-size:13px;margin-top:12px}
+
+/* Pedir una demo: correo o formulario (v9) */
+.o-sep{display:flex;align-items:center;gap:12px;margin:22px 0 4px;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.o-sep::before,.o-sep::after{content:"";flex:1;height:1px;background:var(--edge-2)}
+.demo-form{margin-top:10px}
+.demo-form .df-par{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.demo-form .df-row{margin-top:12px;min-width:0}
+.demo-form .wf-label{display:block;font-size:13px;font-weight:600;color:var(--fg-2);margin-bottom:6px}
+.demo-form .opc{font-weight:400;color:var(--muted)}
+.demo-form .wf-field-input{width:100%;font:400 15px/1.4 var(--font);color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--edge-2);border-radius:9px;padding:10px 12px;outline:none;box-sizing:border-box}
+.demo-form textarea.wf-field-input{resize:vertical;min-height:76px}
+.demo-form .wf-field-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow)}
+.demo-form .wf-field-error-active .wf-field-input{border-color:#E07A6B}
+.demo-form .wf-error-parent-ele{margin-top:6px;font-size:12.5px;color:#F0A196}
+.demo-form .wf-error-view-more{margin-left:6px;text-decoration:underline;cursor:pointer}
+.demo-form .g-recaptcha{min-height:78px}
+.demo-form .df-espera{display:block;font-size:12.5px;color:var(--muted);padding-top:8px}
+.demo-form .df-check{display:flex;gap:10px;align-items:flex-start}
+.demo-form .df-check input{margin-top:3px;width:16px;height:16px;accent-color:var(--gold);flex:none}
+.demo-form .df-check label{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.demo-form .btn{margin-top:16px;border:0;cursor:pointer}
+.demo-form .btn:disabled{opacity:.6;cursor:default}
+.demo-form .df-pie{display:block;color:var(--muted);font-size:12px;margin-top:10px}
+.df-respuesta{width:100%;min-height:150px;border:0;border-radius:12px;background:#fff;margin-top:12px}
+.df-nota{font-size:12.5px;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.demo-form .df-par{grid-template-columns:1fr}}
 footer{background:var(--deep);border-top:1px solid var(--edge)}
 footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
 footer em{font-style:normal;color:var(--gold-hi)}
@@ -1103,10 +1129,62 @@ footer em{font-style:normal;color:var(--gold-hi)}
       <div class="contacto">
         <div class="k">Pedir una demo</div>
         <div class="mail-row">
-          <span class="mail" id="mail">gabriel@getboardcraft.com</span>
+          <span class="mail" id="mail">hola@getboardcraft.com</span>
           <button class="copiar" id="copiar" type="button">Copiar</button>
         </div>
         <small id="copiado" aria-live="polite">Escríbanos y coordinamos el horario.</small>
+        <div class="o-sep"><span>o déjenos sus datos</span></div>
+        <iframe id='hidden7707958000000643600Frame' name='hidden7707958000000643600Frame' title="Respuesta del formulario" style='display: none;' class='df-respuesta'></iframe>
+        <p id="demo-respuesta-nota" class="df-nota" hidden>Si ve un mensaje de error en el recuadro, escríbanos al correo de arriba.</p>
+        <div id='BiginWebToRecordFormParent7707958000000643600' class="demo-form">
+          <form id='BiginWebToRecordForm7707958000000643600' name='BiginWebToRecordForm7707958000000643600' method='POST' enctype='multipart/form-data' target='hidden7707958000000643600Frame' accept-charset='UTF-8' onsubmit='return bcEnviarDemo(event)' novalidate>
+            <input type='text' style='display:none;' name='xnQsjsdp' value='aa965cf7cf087b306fc1c4cf8e6ada0a377cf23d72a637493e01f42c8b78071b'/>
+            <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+            <input type='text' style='display:none;' name='xmIwtLD' value='afc0f2e400096ae81a1221e9db3cbcacbedf586507f693fd1c512e2825dc92087b39c858cbeda08fc9bc891d61ef58ae'/>
+            <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM='/>
+            <input type='hidden' name='rmsg' id='rmsg' value='true'/>
+            <input type='text' style='display:none;' name='returnURL' value='null' />
+            <div class="df-par">
+            <div class="df-row">
+              <label class="wf-label" for="f-First-Name">Nombre</label>
+              <div class="wf-field wf-field-mandatory"><div class="wf-field-inner"><input id='f-First-Name' name='First Name' maxlength='40' type='text' value='' class='wf-field-item wf-field-input' oninput='removeError(this)' autocomplete='given-name'/></div></div>
+            </div>
+            <div class="df-row">
+              <label class="wf-label" for="f-Last-Name">Apellido</label>
+              <div class="wf-field wf-field-mandatory"><div class="wf-field-inner"><input id='f-Last-Name' name='Last Name' maxlength='80' type='text' value='' class='wf-field-item wf-field-input' oninput='removeError(this)' autocomplete='family-name'/></div></div>
+            </div>
+            </div>
+            <div class="df-row">
+              <label class="wf-label" for="f-Email">Correo electrónico</label>
+              <div class="wf-field wf-field-mandatory"><div class="wf-field-inner"><input id='f-Email' name='Email' maxlength='100' type='text' value='' class='wf-field-item wf-field-input' oninput='removeError(this)' fvalidate='true' ftype='email' autocomplete='email' inputmode='email'/></div></div>
+            </div>
+            <div class="df-par">
+            <div class="df-row">
+              <label class="wf-label" for="f-Accounts-Account-Name">Empresa</label>
+              <div class="wf-field wf-field-mandatory"><div class="wf-field-inner"><input id='f-Accounts-Account-Name' name='Accounts.Account Name' maxlength='200' type='text' value='' class='wf-field-item wf-field-input' oninput='removeError(this)' autocomplete='organization'/></div></div>
+            </div>
+            <div class="df-row">
+              <label class="wf-label" for="f-Mailing-Country">País <span class="opc">(opcional)</span></label>
+              <div class="wf-field"><div class="wf-field-inner"><input id='f-Mailing-Country' name='Mailing Country' maxlength='100' type='text' value='' class='wf-field-item wf-field-input' oninput='removeError(this)' autocomplete='country-name'/></div></div>
+            </div>
+            </div>
+            <div class="df-row">
+              <label class="wf-label" for="f-Description">Mensaje <span class="opc">(opcional)</span></label>
+              <div class="wf-field"><div class="wf-field-inner"><textarea id='f-Description' name='Description' maxlength='32000' rows='3' class='wf-field-item wf-field-input' oninput='removeError(this)'></textarea></div></div>
+            </div>
+            <div class="df-row">
+              <div class="wf-field"><div class="wf-field-inner"><div class='g-recaptcha' data-sitekey='6LcDfjUuAAAAAD8pXFkFqqWlCoM5iw1c1olcVsj9' data-theme='dark' data-callback='rccallback7707958000000643600' data-expired-callback='rcexpcallback7707958000000643600' captcha-verified='false' id='recap7707958000000643600'><span class="df-espera">La casilla «No soy un robot» aparece al empezar a completar el formulario.</span></div></div></div>
+            </div>
+            <div class="df-row">
+              <div class="wf-field"><div class="wf-field-inner df-check">
+                <input class='wf-field-item' type='checkbox' id='privacycheck7707958000000643600' name='privacyTool' autocomplete='off' onclick='disablePrivacyError7707958000000643600()'/>
+                <label for='privacycheck7707958000000643600'>Autorizo a BoardCraft a usar estos datos sólo para responder mi pedido de demo y contactarme. Este formulario usa Google reCAPTCHA para frenar envíos automáticos.</label>
+              </div></div>
+            </div>
+            <button id='formsubmit' type='submit' class='btn'>Enviar pedido</button>
+            <small class="df-pie">Lo contactaremos a la brevedad. Formulario provisto por Bigin (Zoho).</small>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -1115,13 +1193,14 @@ footer em{font-style:normal;color:var(--gold-hi)}
     <div class="wrap">
       <h2>Privacidad de este sitio</h2>
       <ul>
-        <li>Este sitio no usa cookies, ni herramientas de medición de visitas, ni publicidad.</li>
-        <li>No tiene formularios. Si nos escribe al correo de contacto, usamos su mensaje sólo para responderle.</li>
+        <li>Este sitio no usa cookies propias, ni herramientas de medición de visitas, ni publicidad.</li>
+        <li>Si nos escribe al correo de contacto, usamos su mensaje sólo para responderle.</li>
+        <li>Tiene un solo formulario, para pedir una demo. Lo que escriba ahí se guarda en Bigin, el sistema de Zoho con el que BoardCraft hace el seguimiento de sus contactos comerciales, y lo usamos sólo para responderle. Para frenar envíos automáticos, el formulario usa Google reCAPTCHA, que puede usar cookies propias para esa comprobación. Esos dos servicios se cargan recién cuando usted empieza a completar el formulario.</li>
         <li>El país se deduce del huso horario de su dispositivo, dentro de su navegador, y no se envía a ningún servidor. Si usted elige un país, su navegador lo recuerda para la próxima visita.</li>
-        <li>La tipografía y el audio están dentro del propio sitio: su visita no consulta a servicios de terceros.</li>
+        <li>La tipografía y el audio están dentro del propio sitio: si no usa el formulario, su visita no consulta a servicios de terceros.</li>
         <li>El servicio que aloja el sitio puede registrar datos técnicos de la visita, como la dirección IP, por razones de seguridad.</li>
       </ul>
-      <p>Este aviso se refiere al sitio web. El tratamiento de la información dentro de la aplicación BoardCraft se rige por el acuerdo que se firma con cada empresa cliente. Actualizado el 19 de octubre de 2026.</p>
+      <p>Este aviso se refiere al sitio web. El tratamiento de la información dentro de la aplicación BoardCraft se rige por el acuerdo que se firma con cada empresa cliente. Actualizado el 27 de noviembre de 2026.</p>
     </div>
   </section>
 </main>
@@ -1391,6 +1470,230 @@ footer em{font-style:normal;color:var(--gold-hi)}
   bar.addEventListener('click',function(e){ var r=bar.getBoundingClientRect(); a.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*dur(); pinta(); });
   bar.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){a.currentTime=Math.min(dur(),a.currentTime+5);e.preventDefault();} if(e.key==='ArrowLeft'){a.currentTime=Math.max(0,a.currentTime-5);e.preventDefault();} pinta(); });
   pinta();
+})();
+</script>
+<script>
+/* Formulario de pedido de demo (Bigin). Google reCAPTCHA y el código de Bigin se cargan
+   recién cuando la persona empieza a usar el formulario: antes, la visita no consulta a terceros. */
+var mndFields7707958000000643600=new Array('First Name','Last Name','Email','Accounts.Account Name');
+ 	  var fldLangVal7707958000000643600=new Array('Nombre','Apellido','Correo electrónico','Empresa');
+ 	 var wfInnerWidth = window.innerWidth;
+ 	 if(wfInnerWidth <= 768){
+ 	 	 document.forms['BiginWebToRecordForm7707958000000643600'].setAttribute('data-ux-form-alignment', 'top');
+ 	 }
+ 	function removeError(fieldObj) {
+ 	 	var parentElement = fieldObj.closest('.wf-field'),
+ 	 	 	childEle = parentElement.getElementsByClassName('wf-error-parent-ele')[0];
+ 	 	if(childEle) {
+ 	 	 	parentElement.classList.remove('wf-field-error-active');
+ 	 	 	parentElement.removeChild(parentElement.getElementsByClassName('wf-error-parent-ele')[0]);
+ 	 	}
+ 	}
+ 	function setError(fieldObj, label) {
+ 	 	var parentElement = fieldObj.closest('.wf-field'),
+ 	 		childEle = parentElement.getElementsByClassName('wf-error-parent-ele')[0];
+ 	 	if(!childEle) {
+ 	 	 	var errorParentEle = document.createElement('DIV'),
+ 	 	 	spanEle = document.createElement('SPAN'),
+ 	 	 	viewMoreEle = document.createElement('SPAN');
+ 	 	 	spanEle.setAttribute('class', 'wf-field-error wf-field-error-long');
+ 	 	 	spanEle.innerHTML = label;
+ 	 	 	errorParentEle.classList.add('wf-error-parent-ele');
+ 	 	 	errorParentEle.appendChild(spanEle);
+ 	 	 	parentElement.append(errorParentEle);
+ 	 	 	parentElement.classList.add('wf-field-error-active');
+ 	 	 	if(spanEle.scrollWidth > parentElement.offsetWidth) {
+ 	 	 	 	viewMoreEle.innerHTML = 'Ver más';
+ 	 	 	 	viewMoreEle.classList.add('wf-error-view-more');
+ 	 	 	 	errorParentEle.append(viewMoreEle);
+ 	 	 	 	viewMoreEle.addEventListener('click', function() {
+ 	 	 	 	errorParentEle.removeChild(viewMoreEle);
+ 	 	 	 	spanEle.classList.remove('wf-field-error-long');
+ 	 	 	 	});
+ 	 	 	} else {
+ 	 	 	 	spanEle.classList.remove('wf-field-error-long')
+ 	 	 	}
+ 	 	}
+ 	}
+ 	function validateFields7707958000000643600() {
+ 	 	var isReturn = true;
+ 	 	var form = document.forms['BiginWebToRecordForm7707958000000643600'];
+ 	 	var validateFld = form.querySelectorAll('[fvalidate=true]');
+ 	 	var i;
+ 	 	for (i = 0; i < validateFld.length; i++)
+ 	 	{
+ 	 	 	var validateFldVal = validateFld[i].value;
+ 	 	 	var fType = validateFld[i].getAttribute('ftype');
+ 	 	 	if(validateFldVal !== '' || (validateFldVal === '' && fType.indexOf('date') !== -1)) {
+ 	 	 	 	var wfLabel = validateFld[i].parentElement.parentElement.parentElement.getElementsByClassName('wf-label')[0];
+ 	 	 	 	var fLabel = wfLabel ? wfLabel.innerHTML: '';
+ 	 	 	 	switch(validateFld[i].getAttribute('ftype')) {
+ 	 	 	 	case 'string_rest_number':
+ 	 	 	 	case 'string':
+ 	 	 	 	 	var isError = false,
+ 	 	 	 	 	errorKey = 'Sólo se admiten letras.';
+ 	 	 	 	 	if(validateFld[i].getAttribute('ftype') === 'string_rest_number' && validateFldVal.match((/\d/g)) !== null) {	
+ 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	}else if(validateFld[i].hasAttribute('fmin')){
+ 	 	 	 	 	 	if(validateFldVal.length < parseInt(validateFld[i].getAttribute('fmin'))) {
+ 	 	 	 	 	 	 	errorKey = 'Your input must be at least ' +validateFld[i].getAttribute('fmin') + ' character(s).';
+ 	 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	 	} else if(validateFldVal.length > parseInt(validateFld[i].getAttribute('fmax'))) {
+ 	 	 	 	 	 	 	errorKey = 'Your input should not exceed ' +validateFld[i].getAttribute('fmax') + ' character(s).';
+ 	 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	 	if(isError){
+ 	 	 	 	 	 	setError(validateFld[i], errorKey);
+ 	 	 	 	 	 	isReturn = false;
+ 	 	 	 	 	}
+ 	 	 	 	 	break;
+ 	 	 	 	case 'email':
+ 	 	 	 	 	if(validateFldVal.match(/^([A-Za-z0-9-._%'+/]+@[A-Za-z0-9.-]+.[a-zA-Z]{2,22})$/) === null) {
+ 	 	 	 	 	 	setError(validateFld[i], 'Revise el campo ' + fLabel);
+ 	 	 	 	 	 	isReturn = false;
+ 	 	 	 	 	}
+ 	 	 	 	 	break;
+ 	 	 	 	case 'number':
+ 	 	 	 	case 'double':
+ 	 	 	 	 	var isError = false,
+ 	 	 	 	 	errorKey = 'Revise el campo ' + fLabel;
+ 	 	 	 	 	if((validateFld[i].getAttribute('ftype') === 'number' && validateFldVal.match(/^[0-9]+$/) === null)
+ 	 	 	 	 			|| (validateFld[i].getAttribute('ftype') === 'double' && validateFldVal.match(/^[0-9]*(\.[0-9]{0,2})?$/) === null)) {
+ 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	}else if(validateFld[i].hasAttribute('fmin')){
+ 	 	 	 	 	 	if(validateFldVal < parseInt(validateFld[i].getAttribute('fmin'))) {
+ 	 	 	 	 	 	 	errorKey = 'Enter a number greater than or equal to ' +validateFld[i].getAttribute('fmin');
+ 	 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	 	} else if(validateFldVal > parseInt(validateFld[i].getAttribute('fmax'))) {
+ 	 	 	 	 	 	 	errorKey = 'Enter a number less than or equal to ' +validateFld[i].getAttribute('fmax');
+ 	 	 	 	 	 	 	isError = true;
+ 	 	 	 	 	 	}
+ 	 	 	 	 	}
+ 	 	 	 	 	if(isError){
+ 	 	 	 	 	 	setError(validateFld[i], errorKey);
+ 	 	 	 	 	 	isReturn = false;
+ 	 	 	 	 	}
+ 	 	 	 	 	break;
+ 	 	 	 	 }
+ 	 	 	}
+ 	 	}
+ 	 	return isReturn;
+ 	}
+ 	function privacyError7707958000000643600() {
+ 	 	var privacyTool = document.getElementById('privacycheck7707958000000643600');
+ 	 	if(privacyTool !=undefined && !privacyTool.checked )
+ 	 	{
+ 	 	 	setError(privacyTool, 'Para enviar el pedido, marque la autorización.');
+ 	 	 	return false;
+ 	 	}
+ 	 	return true;
+ 	}
+ 	function disablePrivacyError7707958000000643600() {
+ 	 	var privacyTool = document.getElementById('privacycheck7707958000000643600');
+ 	 	removeError(privacyTool);
+ 	}
+ 	function validateReCaptcha7707958000000643600() {
+ 	 	var recapEle = document.getElementById('recap7707958000000643600');
+ 	 	if(recapEle !=undefined && recapEle.getAttribute('captcha-verified') == 'false')
+ 	 	{
+ 	 	 	setError(recapEle, 'Marque la casilla «No soy un robot».');
+ 	 	 	return false;
+ 	 	}
+ 	 	return true;
+ 	}
+ 	function rccallback7707958000000643600() {
+ 	 	var recapEle = document.getElementById('recap7707958000000643600');
+ 	 	if(recapEle !=undefined){
+ 	 	 	 recapEle.setAttribute('captcha-verified',true);
+ 	 	 	 removeError(recapEle);
+ 	 	}
+ 	}
+ 	function rcexpcallback7707958000000643600() {
+ 	 	var recapEle = document.getElementById('recap7707958000000643600');
+ 	 	if(recapEle !=undefined){
+ 	 	 	 recapEle.setAttribute('captcha-verified',false);
+ 	 	}
+ 	}
+
+		function checkMandatory7707958000000643600() {
+		var isReturn = true;
+		var isNotCaptcha = false;
+		for(i=0;i<mndFields7707958000000643600.length;i++) {
+		  var fieldObj=document.forms['BiginWebToRecordForm7707958000000643600'][mndFields7707958000000643600[i]];
+		  if(fieldObj) {
+			if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+				if(fieldObj.type =='file'){
+					setError(fieldObj, 'Elija un archivo.'); 
+					isReturn = false;
+				}
+				else {
+					setError(fieldObj, 'Complete el campo ' + fldLangVal7707958000000643600[i] + '.');
+				isReturn= false;
+				}
+			}  else if(fieldObj.nodeName=='SELECT') {
+				if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+				setError(fieldObj, 'Elija una opción en ' + fldLangVal7707958000000643600[i] + '.');
+				isReturn = false;
+			   }
+			} else if(fieldObj.type =='checkbox'){
+ 	 	 	 if(fieldObj.checked == false){
+				setError(fieldObj, 'Marque ' + fldLangVal7707958000000643600[i]);
+				isReturn= false;
+				} 
+			 }
+		    }
+		}
+		if(!privacyError7707958000000643600()){isReturn = false;}
+		 isNotCaptcha = true;
+		if(!validateReCaptcha7707958000000643600()){isReturn = false;}
+		if(!validateFields7707958000000643600()){isReturn = false;}
+		if(!isReturn){
+			var errEle = document.getElementsByClassName('wf-field-error');
+			if(errEle && errEle.length >0){
+				var inputEle = errEle[0].closest('.wf-field').getElementsByTagName('input');
+				if(inputEle && inputEle.length == 0) {
+					inputEle = errEle[0].closest('.wf-field').getElementsByTagName('select');
+				}
+				if(inputEle && inputEle.length > 0) {
+					inputEle[0].focus();
+				}
+			}
+		}else{
+			document.getElementById('formsubmit').disabled = true;
+		}
+		return isReturn; 
+		}
+
+	   
+		document.getElementById('hidden7707958000000643600Frame').addEventListener('load', function () {
+			try {
+				var doc = arguments[0].currentTarget.contentWindow.document;
+				if(doc.body.childElementCount !== 0) {
+					arguments[0].currentTarget.style.display = 'block'; document.getElementById('demo-respuesta-nota').hidden = false;
+					document.getElementById('BiginWebToRecordFormParent7707958000000643600').style.display = 'none';
+				}
+			} catch (error) {
+				arguments[0].currentTarget.style.display = 'block'; document.getElementById('demo-respuesta-nota').hidden = false;
+				document.getElementById('BiginWebToRecordFormParent7707958000000643600').style.display = 'none';
+				setSubmitState7707958000000643600(false);
+			}
+		});
+
+(function(){
+  var cargado=false, form=document.getElementById('BiginWebToRecordForm7707958000000643600');
+  function cargar(){
+    if(cargado) return; cargado=true;
+    var r=document.createElement('script'); r.src='https://www.google.com/recaptcha/api.js?hl=es'; r.async=true; r.defer=true; document.body.appendChild(r);
+    var w=document.createElement('script'); w.id='wf_script'; w.src='https://bigin.zoho.com/crm/WebformScriptServlet?rid=afc0f2e400096ae81a1221e9db3cbcacbedf586507f693fd1c512e2825dc92087b39c858cbeda08fc9bc891d61ef58aegidaa965cf7cf087b306fc1c4cf8e6ada0a377cf23d72a637493e01f42c8b78071b'; document.body.appendChild(w);
+    var esp=form.querySelector('.df-espera'); if(esp) esp.remove();
+  }
+  form.addEventListener('focusin', cargar);
+  form.addEventListener('pointerdown', cargar);
+  window.bcEnviarDemo=function(e){
+    if(!cargado || typeof window['validateForm7707958000000643600']!=='function'){ cargar(); if(e) e.preventDefault(); return false; }
+    return window['validateForm7707958000000643600']();
+  };
 })();
 </script>
 </body>

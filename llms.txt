@@ -6,7 +6,7 @@ BoardCraft reúne el plan del año, la agenda, la convocatoria, los materiales y
 
 Seguridad: cada empresa en su propio espacio; cada persona ve sólo las sesiones donde tiene un rol; segunda comprobación obligatoria al ingresar; marca de agua y bloqueo de descarga de materiales; cada función de IA se puede encender o pausar por empresa.
 
-Contacto: gabriel@getboardcraft.com
+Contacto: hola@getboardcraft.com (o el formulario «Pedir una demo» de la página principal)
 
 ## Páginas
 
